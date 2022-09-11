@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100vh;
+    background-image: url(images/bg-stars.svg), url(images/pattern-hills.svg), linear-gradient(hsl(240, 14%, 14%), hsl(272, 21%, 14%));
+    background-repeat: no-repeat;
+    background-size: cover, contain;
+    background-position: bottom;
+}
+#game{
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 7px 7px hsl(234, 17%, 12%);
+    padding: 20px;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: hsl(345, 95%, 68%);
+    position: relative;
+    top: 150px;
+    border-radius: 5px;
+    
+}
+.animate{
+    animation: jump 500ms linear;
+}
+@keyframes jump {
+    0%{top: 150px;}
+    30%{top: 100px; background-color: #FF8FB1}
+    70%{top: 100px;}
+    100%{top: 150px; background-color: #7A4495}
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: #AFB4FF;
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: block 1s infinite linear;
+    animation-delay: 500ms;
+    border-radius: 5px;
+}
+@keyframes block {
+    from {left: 480px; background-color: #AFB4FF;}
+    40%{background-color: #9C9EFE;}
+    to {left: -40px; background-color: #A66CFF;}
+}
+.action{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    /* -ms-transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    
+}
+#call-to-action{
+    margin: 20px;
+
+}
+#call-to-action a{
+    text-decoration: none;
+    color: bisque;
+}
+#call-to-action a:hover{
+    color: #FAD4D4;
+    font-size: 120%;
+}
